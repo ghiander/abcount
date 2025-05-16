@@ -1,0 +1,12 @@
+[project]
+name = "abcount"
+version = "0.1.0"
+description = "Cheminformatics functionality that counts the acidic and basic groups in molecules."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "rdkit",
+]
+
+[tool.setuptools.package-data]
+abcount = ["data/*.json"]

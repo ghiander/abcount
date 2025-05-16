@@ -1,0 +1,1202 @@
+[
+    {
+        "index": 1,
+        "SMARTS": "[SX4:0](=[O:1])(=[O:2])([O:3]-[C,c,N,n:4])-[OX2:5]-[H:6]",
+        "center_id": "6",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 2,
+        "SMARTS": "[SX4:0](=[O:1])(=[O:2])(-[C,c,N,n:3])-[OX2:4]-[H:5]",
+        "center_id": "5",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 3,
+        "SMARTS": "[SX3:0](=[O:1])-[O:2]-[H:3]",
+        "center_id": "3",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 4,
+        "SMARTS": "[c,n,o:0]-[C:1](=[O:2])-[O:3]-[H:4]",
+        "center_id": "4",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 5,
+        "SMARTS": "[C:0](=[O:1])-[O:2]-[H:3]",
+        "center_id": "3",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 6,
+        "SMARTS": "[C,c,N,n:0](=[O,S:1])-[SX2,OX2:2]-[H:3]",
+        "center_id": "3",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 7,
+        "SMARTS": "[c,n:0]-[SX2:1]-[H:2]",
+        "center_id": "2",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 8,
+        "SMARTS": "[C,N:0]-[SX2:1]-[H:2]",
+        "center_id": "2",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 9,
+        "SMARTS": "[PX4:0](=[O:1])(-[OX2:2]-[H:3])(-[O+0:4])-[OX2:5]-[H:6]",
+        "center_id": "3,6",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 10,
+        "SMARTS": "[PX4:0](=[O:1])(-[OX2:2]-[H:3])(-[C,c,N,n:4])-[OX2:5]-[H:6]",
+        "center_id": "3,6",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 11,
+        "SMARTS": "[PX4:0](=[O:1])(-[O:2]-[H:3])(-[H:4])-[C:5]",
+        "center_id": "3",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 12,
+        "SMARTS": "[c,n,o:0]-[O:1]-[H:2]",
+        "center_id": "2",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 13,
+        "SMARTS": "[O:0]([$(C=O),$(C[Cl]),$(CF),$(C[Br]),$(CC#N):1])-[O:2]-[H:3]",
+        "center_id": "3",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 14,
+        "SMARTS": "[C:0]-[O:1]-[O:2]-[H:3]",
+        "center_id": "3",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 15,
+        "SMARTS": "[O:0]=[C;R:1]-[C;R:2]=[C;R:3]-[O:4]-[H:5]",
+        "center_id": "5",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 16,
+        "SMARTS": "[C:0]=[C:1]-[O:2]-[H:3]",
+        "center_id": "3",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 17,
+        "SMARTS": "[C:0]-[O:1]-[H:2]",
+        "center_id": "2",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 18,
+        "SMARTS": "[C:0](=[O:1])-[N:2]-[O:3]-[H:4]",
+        "center_id": "4",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 19,
+        "SMARTS": "[O,S:0]=[C;R:1]([$([#8]),$([#7]),$([#16]),$([#6][Cl]),$([#6]F),$([#6][Br]):2])-[N;R:3]([C;R:4]=[O,S:5])-[H:6]",
+        "center_id": "6",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 20,
+        "SMARTS": "[O,S:0]=[C;R:1]-[N;R:2]([C;R:3]=[O,S:4])-[H:5]",
+        "center_id": "5",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 21,
+        "SMARTS": "[F,Cl,Br,S,s,P,p:0][#6:1][CX3:2](=[O,S:3])-[NX3+0:4]([CX3:5]=[O,S:6])-[H:7]",
+        "center_id": "7",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 22,
+        "SMARTS": "[O,S:0]=[CX3:1]-[NX3+0:2]([CX3:3]=[O,S:4])-[H:5]",
+        "center_id": "5",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 23,
+        "SMARTS": "[C:0](=[O:1])-[N:2](-[Br,Cl,I,F,S,O,N,P:3])-[H:4]",
+        "center_id": "4",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 24,
+        "SMARTS": "[C:0](=[O:1])-[N:2]-[H:3]",
+        "center_id": "3",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 25,
+        "SMARTS": "[SX4:0](=[O:1])(=[O:2])-[NX3+0:3]-[H:4]",
+        "center_id": "4",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 26,
+        "SMARTS": "[PX4:0](=[O:1])(-[C,c,N,n,F,Cl,Br,I:2])(-[C,c,N,n,F,Cl,Br,I:3])-[OX2:4]-[H:5]",
+        "center_id": "5",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 27,
+        "SMARTS": "[PX4:0](=[O:1])(-[OX2:2]-[C,c,N,n,F,Cl,Br,I:3])(-[O+0:4]-[C,c,N,n,F,Cl,Br,I:5])-[OX2:6]-[H:7]",
+        "center_id": "7",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 28,
+        "SMARTS": "[PX4:0](=[O:1])(-[OX2:2]-[C,c,N,n,F,Cl,Br,I:3])(-[C,c,N,n,F,Cl,Br,I:4])-[OX2:5]-[H:6]",
+        "center_id": "6",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 29,
+        "SMARTS": "[n:0]-[H:1]",
+        "center_id": "1",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 30,
+        "SMARTS": "[PX4:0](=[O:1])(=[O:2])(-[C,c,N,n:3])-[OX2:4]-[H:5]",
+        "center_id": "5",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 31,
+        "SMARTS": "[C:0](-[C,c:1])=[NX2:2]-[O:3]-[H:4]",
+        "center_id": "4",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 32,
+        "SMARTS": "[CX4:0]-[NX3:1](-[H:2])-[CX3:3](=[NX2:4])-[SH:5]",
+        "center_id": "2",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 33,
+        "SMARTS": "[CX3:0](=[OX1:1])-[CX4:2]-[NX3:3](-[H:4])-[cX3:5]",
+        "center_id": "4",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 34,
+        "SMARTS": "[CX3:0](=[OX1:1])-[CX4:2]-[NX3H1:3](-[H:4])-[CX3:5]=[NX2H0:6]",
+        "center_id": "4",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 35,
+        "SMARTS": "[NX3:0](-[H:1])-[C:2]=[C:3]-[C:4](=[O:5])-[C:6]-[O:7]",
+        "center_id": "1",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 36,
+        "SMARTS": "[c:0]-[NX3:1](-[H:2])-[C,n:3]",
+        "center_id": "2",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 37,
+        "SMARTS": "[NX3:0]-[OX2:1]-[H:2]",
+        "center_id": "2",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 38,
+        "SMARTS": "[SX4:0](=[O:1])(=[O:2])-[NX3:3]-[H:4]",
+        "center_id": "4",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 39,
+        "SMARTS": "[NX2:0]-[NX2:1]=[C:2]-[NX3:3]-[H:4]",
+        "center_id": "4",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 40,
+        "SMARTS": "[C:0]-[NX3:1](-[H:2])-[C:3](=[SX1:4])",
+        "center_id": "2",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 41,
+        "SMARTS": "[C:0](-[C:1])(-[C:2])=[NX2:3]-[H:4]",
+        "center_id": "4",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 42,
+        "SMARTS": "[C:0]=[NX2:1]-[NX3:2](-[H:3])-[c:4]",
+        "center_id": "3",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 43,
+        "SMARTS": "[C:0]-[C:1](-[C,O:2])=[NX2:3]-[H:4]",
+        "center_id": "4",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 44,
+        "SMARTS": "[cX3;r6:0]-[NX3:1]-[H:2]",
+        "center_id": "2",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 45,
+        "SMARTS": "[C:0](=[O:1])-[C:2](-[H:3])(-[C:4])-[C:5](=[O:6])",
+        "center_id": "3",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 46,
+        "SMARTS": "[PX4:0](=[O:1])(=[O:2])-[O:3]-[H:4]",
+        "center_id": "4",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 47,
+        "SMARTS": "[C:0](-[H:1])(-[C:2]=[O:3])-[C:4]=[O:5]",
+        "center_id": "1",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 48,
+        "SMARTS": "[C:0](=[S,O:1])-[NX3:2]-[H:3]",
+        "center_id": "3",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 49,
+        "SMARTS": "[S:0]-[S:1](=[O:2])(=[O:3])-[O:4]-[H:5]",
+        "center_id": "5",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 50,
+        "SMARTS": "[C:0]=[N:1]-[O:2]-[H:3]",
+        "center_id": "3",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 51,
+        "SMARTS": "[C:0](-[N:1])(=[N:2])-[N:3](-[C:4])-[H:5]",
+        "center_id": "5",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 52,
+        "SMARTS": "[NX2H0;r6:0]=[C;r6:1]-[C;r6:2](-[H:3])-[C:4]#[N:5]",
+        "center_id": "3",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 53,
+        "SMARTS": "[C:0]=[NX2:1]-[H:2]",
+        "center_id": "2",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 54,
+        "SMARTS": "[c,C:0]-[C:1](=[OX1:2])-[C:3]=[C:4]-[NX3:5]-[H:6]",
+        "center_id": "6",
+        "type": "A",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 55,
+        "SMARTS": "[N:0]-[C:1](-[N:2])=[NX2:3]-[H:4]",
+        "center_id": "3",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 56,
+        "SMARTS": "[C:0](-[N:1])=[NX2+0:2]-[H:3]",
+        "center_id": "2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 57,
+        "SMARTS": "[c:0]-[NX3+0:1]([H:2])[H:3]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 58,
+        "SMARTS": "[c:0]-[NX3+0:1]([H:2])[!H:3]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 59,
+        "SMARTS": "[c:0]-[NX3+1:1]([!H:2])([!H:3])-[H:4]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 60,
+        "SMARTS": "[n+1&H1:0]",
+        "center_id": "0",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 61,
+        "SMARTS": "[C:0]-[NX4+1:1]-[H:2]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 62,
+        "SMARTS": "[C,c:0]-[O:1]-[NH2:2]",
+        "center_id": "2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 63,
+        "SMARTS": "[CX4:0]-[NX3:1]([CX4,c:2])([CX4,c:3])",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 64,
+        "SMARTS": "[C:0](-[C,c:1])=[NX2:2]-[O:3]-[H:4]",
+        "center_id": "2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 65,
+        "SMARTS": "[C:0]-[nX3;H0:1]([C,c:2])([C,c:3])",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 66,
+        "SMARTS": "[c:0]:[nX2:1]:[c:2]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 67,
+        "SMARTS": "[c:0]:[nX2:1]:[nX3:2]:[c:3]=[OX1:4]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 68,
+        "SMARTS": "[CX4:0]-[NX3:1](-[H:2])-[CX4:3]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 69,
+        "SMARTS": "[C:0](=[O:1])-[N:2](-[H:3])-[NX3:4](-[H:5])(-[H:6])",
+        "center_id": "4",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 70,
+        "SMARTS": "[c:0]:[nX2:1]:[n:2]:[n:3]:[n:4]-[CX4:5]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 71,
+        "SMARTS": "[CX4:0](-[CX4:1])(-[CX4:2])-[NH2:3]",
+        "center_id": "3",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 72,
+        "SMARTS": "[CX3:0]=[NX2:1]-[CX4,SX4:2]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 73,
+        "SMARTS": "[c:0]-[NH2:1]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 74,
+        "SMARTS": "[!OX1:0][C,c:1]-[NX3:2](-[c:3])-[H:4]",
+        "center_id": "2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 75,
+        "SMARTS": "[C,c:0]-[NX2:1]=[c:2]:[nX3:3]-[H:4]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 76,
+        "SMARTS": "[nX2:0](:[c:1]):[nX3:2]-[c:3]",
+        "center_id": "0",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 77,
+        "SMARTS": "[c:0]=[NX2:1]-[H:2]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 78,
+        "SMARTS": "[c:0]:[nX2:1]:[nX2:2]:[nX3:3](-[H:4]):[nX2:5]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 79,
+        "SMARTS": "[OX1:0]=[CX3:1]-[C:2]-[NH2:3]",
+        "center_id": "3",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 80,
+        "SMARTS": "[C:0]=[N:1]-[N:2]=[C:3](-[NH2:4])-[S,O,P:5]",
+        "center_id": "2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 81,
+        "SMARTS": "[nH1:0]:[c:1]:[nX2H0:2]:[nX2H0:3]:[cX3:4]:[cX3:5]",
+        "center_id": "2,3",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 83,
+        "SMARTS": "[cX3:0]:[nX2H0:1]:[nX2H0:2]:[cX3:3]:[sX2H0:4]",
+        "center_id": "1,2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 84,
+        "SMARTS": "[cX3:0]:[cX3:1]:[nX2H0:2]:[nX2H0:3]:[cX3:4]:[cX3:5]:[cX3:6]:[nX3:7]:[cX3:8]",
+        "center_id": "2,3",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 85,
+        "SMARTS": "[NX3H0:0]-[CX3:1]=[NX2H0:2]-[NX2H0:3]=[CX3:4]",
+        "center_id": "2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 86,
+        "SMARTS": "[CX3:0]=[NX2H0:1]-[NX3H1:2]-[CX4:3]",
+        "center_id": "1,2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 87,
+        "SMARTS": "[CX3:0](=[OX1:1])-[CX4:2]-[NX3:3](-[H:4])-[cX3:5]",
+        "center_id": "3",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 88,
+        "SMARTS": "[CX3:0](=[OX1:1])-[CX4:2]-[NX3H1:3](-[H:4])-[CX3:5]=[NX2H0:6]",
+        "center_id": "6",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 89,
+        "SMARTS": "[C:0]-[NH:1]-[NH:2]-[C:3]=[O:4]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 90,
+        "SMARTS": "[C:0]=[NX2:1]-[OX2:2]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 91,
+        "SMARTS": "[PX4:0](=[OX1:1])(-[NH2:2])(-[NH1:3])",
+        "center_id": "2,3",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 92,
+        "SMARTS": "[c:0]:[nX2H0:1]:[nX2H0:2]:[cX3:3]:[nX3:4]-[NX3:5]",
+        "center_id": "1,2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 93,
+        "SMARTS": "[c:0]:[nX2:1]:[nX3:2]:[cX3:3]:[cX3:4]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 94,
+        "SMARTS": "[C:0]=[NX2:1]-[C:2]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 95,
+        "SMARTS": "[PX4:0](-[NH1:1])=[OX1:2]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 96,
+        "SMARTS": "[CX4:0]-[CX4:1]-[NH2:2]",
+        "center_id": "2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 97,
+        "SMARTS": "[c:0]=[NX2:1]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 98,
+        "SMARTS": "[PX4:0]-[NX3H0:1]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 99,
+        "SMARTS": "[C:0]-[NX3:1]-[C:2](=[SX1:3])-[NX3:4]-[C:5]",
+        "center_id": "3",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 100,
+        "SMARTS": "[OX2:0]-[C:1](=[OX1:2])-[NX3:3]-[NX3:4]",
+        "center_id": "4",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 101,
+        "SMARTS": "[c:0]-[NX2:1]=[C:2]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 102,
+        "SMARTS": "[c,S:0]-[C:1]-[NH2:2]",
+        "center_id": "2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 103,
+        "SMARTS": "[NX3:0]-[OX2:1]-[H:2]",
+        "center_id": "0",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 104,
+        "SMARTS": "[c:0]:[n:1]:[n:2]:[c:3]:[nX3:4]-[c:5]",
+        "center_id": "1,2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 105,
+        "SMARTS": "[C:0]-[C:1]-[NH2:2]",
+        "center_id": "2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 106,
+        "SMARTS": "[S:0]-[NH1:1]-[C:2]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 107,
+        "SMARTS": "[c:0]-[NX3:1](-[H:2])-[c:4]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 108,
+        "SMARTS": "[C:0]=[NX2:1]-[NX2:2]=[C:3]-[NH2:4]",
+        "center_id": "2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 109,
+        "SMARTS": "[C:0]-[C:1]-[C:2]=[NX2H0:3]-[NX3H0:4]",
+        "center_id": "3,4",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 110,
+        "SMARTS": "[c:0]-[NX3H1:1]-[C:2]-[C:3]=[C:4]-[c:5]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 111,
+        "SMARTS": "[NX3:0]-[C:1](=[S:2])-[NX3:3]",
+        "center_id": "2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 112,
+        "SMARTS": "[c:0]:[nH0:1]:[nH0:2]:[c:3]:[c:4]:[c:5]",
+        "center_id": "1,2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 113,
+        "SMARTS": "[c:0]:[c:1]-[nX3H1:2]-[C:3]-[C:4]=[C:5]",
+        "center_id": "2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 114,
+        "SMARTS": "[C:0]=[C:1]-[NX3H0:2](-[C:3]-[C:4])(-[C:5]-[C:7])",
+        "center_id": "2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 115,
+        "SMARTS": "[nX3:0]:[c:1]:[nX2:2]:[nX2:3]:[c:4]",
+        "center_id": "2,3",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 116,
+        "SMARTS": "[n:0]-[NX3H2:1]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 117,
+        "SMARTS": "[nX3H1:0]:[c:1]:[c:2]:[c:3](=[O:4]):[c:5]:[c:6]",
+        "center_id": "4",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 118,
+        "SMARTS": "[C:0]-[NX3H1:1]-[NX3H2:3]",
+        "center_id": "1,2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 119,
+        "SMARTS": "[OX2:0]-[C:1]-[NX3H2:2]",
+        "center_id": "2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 120,
+        "SMARTS": "[c:0]:[nX2H0:1]:[nX2H0:2]:[nX3H0:3]:[c:4]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 121,
+        "SMARTS": "[SX4:0](=[O:1])(=[O:2])-[NX3H2:3]",
+        "center_id": "3",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 122,
+        "SMARTS": "[NX3H0:0](-[C;!CSX1:1])(-[C;!CSX1:2])-[C;!CSX1:3]",
+        "center_id": "0",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 123,
+        "SMARTS": "[c:0]:[c:1]:[c:2]:[c:3](-[OH:4]):[nX3H1:5]",
+        "center_id": "5",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 124,
+        "SMARTS": "[C:0]-[C:1]-[NX3H0:2]-[OX2:3]-[C:4]",
+        "center_id": "2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 125,
+        "SMARTS": "[c:0]:[c:1]-[NX3H1:2]-[C:3]-[C:4]-[C:5]-[c:6]",
+        "center_id": "2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 126,
+        "SMARTS": "[C:0](=[NX2H1:1])(-[C:2])-[C:3]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 127,
+        "SMARTS": "[C,c:0]-[NX2H0:1]=[NX2H0:2]-[NX3:3]",
+        "center_id": "3",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 128,
+        "SMARTS": "[c:0]:[c:1]:[c:2]:[c:3]:[nX3:4]-[cX3:5]",
+        "center_id": "4",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 129,
+        "SMARTS": "[nX2H0:0]:[nX2H0:1]:[nX2H0:2]:[nX3H0:3]:[c:4]:[c:5]",
+        "center_id": "0",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 130,
+        "SMARTS": "[C:0]=[NX2:1]-[NH1:2]-[c:3]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 131,
+        "SMARTS": "[C:0]-[C:1](-[C,O:2])=[NH1:3]",
+        "center_id": "3",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 132,
+        "SMARTS": "[C:0]-[NX3H0:1](-[C:2])-[NX3H1:3]-[C:4]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 133,
+        "SMARTS": "[nX2:0]:[nX2:1]:[cX3:2](-[C:3]):[nX2:4]:[nX3:5]-[C:6]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 134,
+        "SMARTS": "[c:0]-[C:1]=[NX2H0:2]-[NX2H0:3]=[C:4]-[SH:5]",
+        "center_id": "3",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 135,
+        "SMARTS": "[c:0]-[c:1]:[nX2H0:2]:[nX2H0:3]:[nX3:4](-[C:5]):[nX2:6]",
+        "center_id": "2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 136,
+        "SMARTS": "[c:0](=[SX1:1]):[nX3H1:2]:[c:3]",
+        "center_id": "1,2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 137,
+        "SMARTS": "[C:0]=[NX2H0:1]-[NX3H0:2](-[C:3])-[C:4]",
+        "center_id": "1,2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 138,
+        "SMARTS": "[c:0]:[nX2H0:1]:[sX2H0:2]:[c:3]:[c:4]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 139,
+        "SMARTS": "[C:0]=[NX2H0:1]-[NH2:2]",
+        "center_id": "1,2",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 140,
+        "SMARTS": "[nX2H0:0]:[nX2H0:1]:[c:2]:[nH1:3]:[c:4]:[c:5]:[c:6]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 141,
+        "SMARTS": "[NX2H0;r7:0]-[NX2H0;r7:1]=[C;r7:2]-[NH1;r7:3]-[c;r7:4]:[c;r7:5]-[C;r7:6]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 142,
+        "SMARTS": "[NX3:0](-[C:1])(-[C:2])-[C:3]=[S:4]",
+        "center_id": "0",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 143,
+        "SMARTS": "[c:0]:[nX2H0:1]:[nX2H0:2]:[nX2H0:3]:[nX3H0:4]",
+        "center_id": "1",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 144,
+        "SMARTS": "[c;r5:0]:[c;r5:1]:[c;r5:2]:[c;r5:3]:[nH1;r5:4]",
+        "center_id": "4",
+        "type": "B",
+        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
+        "doi": "10.1021/acs.jcim.1c00075"
+    },
+    {
+        "index": 145,
+        "SMARTS": "[CX3](=O)[OX2H1]",
+        "type": "A",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
+        "index": 146,
+        "SMARTS": "[cX3][OX2H]",
+        "type": "A",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
+        "index": 147,
+        "SMARTS": "[SX4](=O)(=O)[OX2H]",
+        "type": "A",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
+        "index": 148,
+        "SMARTS": "[#16X2H]",
+        "type": "A",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
+        "index": 149,
+        "SMARTS": "[PX4](=O)([OX2H])[OX2H]",
+        "type": "A",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
+        "index": 150,
+        "SMARTS": "[NX3H1][CX3](=O)[CX3](=O)[NX3H1]",
+        "type": "A",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
+        "index": 151,
+        "SMARTS": "[OX2H]",
+        "type": "A",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
+        "index": 152,
+        "SMARTS": "[n;r5][nH;r5][c;r5]",
+        "type": "A",
+        "source": "Manually curated",
+        "doi": null
+    }
+]
