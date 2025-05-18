@@ -35,7 +35,7 @@ DOI: [10.1021/acs.jcim.1c00075](https://doi.org/10.1021/acs.jcim.1c00075)
 
 ## For developers
 - The package was created using `uv` (https://docs.astral.sh/uv/).
-- The package can be installed from the wheel in the `dist/` folder. When a new version needs to be released, a new wheel must be built. That can be done by changing the version of the package inside `setup.py` then calling `python setup.py bdist_wheel` and `python setup.py sdist` which will create a new build.
+- The package can be installed from the wheel in the `dist/` folder. When a new version needs to be released, a new wheel must be built. That can be done by changing the version of the package inside `pyproject.toml` then calling `uv build` which will create a new build.
 - The code can be automatically tested using `pytest -vss tests/test.py` which requires `pytest` to be installed.
 - The `Makefile` can also be used for building (`make build`) or testing (`make test`).
 - Before committing new code, please always check that the style and syntax are compliant using `pre-commit`.

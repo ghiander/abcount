@@ -16,8 +16,8 @@ for row in data:
 
 # Evaluate predictions
 abcounter = ABCounter()
-correct_acid = incorrect_acid = 0
-correct_base = incorrect_base = 0
+tp_acid = fp_acid = tn_acid = fn_acid = 0
+tp_base = fp_base = tn_base = fn_base = 0
 for row in data:
     counts = abcounter.count_acid_and_bases(row["mol"])
 
@@ -25,36 +25,46 @@ for row in data:
     predicted_acid = counts["acid"]
     expected_acid = int(row["pka_acid_num"])
 
-    # Strict validation in case of no groups
-    if expected_acid == 0:
-        if predicted_acid == 0:
-            correct_acid += 1
-        else:
-            incorrect_acid += 1
-    # Relaxed validation in case of groups
-    elif expected_acid in (1, 2):
+    # Strict validation for 0 or 1 groups
+    for n in (0, 1):
+        if expected_acid == n:
+            if n == 0 and predicted_acid == n:  # true negative
+                tn_acid += 1
+            if n == 1 and predicted_acid == n:  # true positive
+                tp_acid += 1
+            if predicted_acid > n:  # false positive
+                fp_acid += 1
+                print(row)
+            if predicted_acid < n:  # only applies to n == 1
+                fn_acid += 1
+    # Relaxed validation in case of 2 groups
+    if expected_acid == 2:
         if predicted_acid >= expected_acid:
-            correct_acid += 1
+            tp_acid += 1
         else:
-            incorrect_acid += 1
+            fn_acid += 1
 
     # Base evaluation
     predicted_base = counts["base"]
     expected_base = int(row["pka_base_num"])
 
-    # Strict validation in case of no groups
-    if expected_base == 0:
-        if predicted_base == 0:
-            correct_base += 1
-        else:
-            incorrect_base += 1
-    # Relaxed validation in case of groups
-    elif expected_base in (1, 2):
+    # Strict validation for 0 or 1 groups
+    for n in (0, 1):
+        if expected_base == n:
+            if n == 0 and predicted_base == n:  # true negative
+                tn_base += 1
+            if n == 1 and predicted_base == n:  # true positive
+                tp_base += 1
+            if predicted_base > n:  # false positive
+                fp_base += 1
+            if predicted_base < n:  # only applies to n == 1
+                fn_base += 1
+    # Relaxed validation in case of 2 groups
+    if expected_base == 2:
         if predicted_base >= expected_base:
-            correct_base += 1
+            tp_base += 1
         else:
-            incorrect_base += 1
+            fn_base += 1
 
-
-print("Acidic groups — Correct:", correct_acid, "| Incorrect:", incorrect_acid)
-print("Basic groups — Correct:", correct_base, "| Incorrect:", incorrect_base)
+print(f"Acidic groups — TP: {tp_acid} | FP: {fp_acid} | TN: {tn_acid} | FN: {fn_acid}")
+print(f"Basic groups — TP: {tp_base} | FP: {fp_base} | TN: {tn_base} | FN: {fn_base}")

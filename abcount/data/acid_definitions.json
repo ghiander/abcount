@@ -216,14 +216,6 @@
         "type": "acid"
     },
     {
-        "smarts": "[CX3](=O)[OX2H1]",
-        "type": "acid"
-    },
-    {
-        "smarts": "[cX3][OX2H]",
-        "type": "acid"
-    },
-    {
         "smarts": "[SX4](=O)(=O)[OX2H]",
         "type": "acid"
     },

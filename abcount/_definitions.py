@@ -4,7 +4,15 @@ from pathlib import Path
 from rdkit import Chem
 
 from abcount.config import fps
+from abcount.model import DefinitionAttribute
 from abcount.model import GroupTypeAttribute
+
+
+class RawDefinitionAttribute:
+    SMARTS = "SMARTS"
+    TYPE = "type"
+    ACIDIC_TYPE = "A"
+    BASIC_TYPE = "B"
 
 
 def _validate_smarts(smarts: str) -> None:
@@ -17,19 +25,19 @@ def preprocess_definition(def_dict: dict) -> dict:
     Normalize and validate a SMARTS definition.
     The function will fail loudly on malformed input.
     """
-    smarts = def_dict["SMARTS"]
-    raw_type = def_dict["type"]
+    smarts = def_dict[RawDefinitionAttribute.SMARTS]
+    raw_type = def_dict[RawDefinitionAttribute.TYPE]
 
-    if raw_type == "A":
+    if raw_type == RawDefinitionAttribute.ACIDIC_TYPE:
         def_type = GroupTypeAttribute.ACID
-    elif raw_type == "B":
+    elif raw_type == RawDefinitionAttribute.BASIC_TYPE:
         def_type = GroupTypeAttribute.BASE
     else:
         def_type = raw_type  # Already normalized
 
     _validate_smarts(smarts)
 
-    return {"smarts": smarts, "type": def_type}
+    return {DefinitionAttribute.SMARTS: smarts, DefinitionAttribute.TYPE: def_type}
 
 
 class SmartsStore:
@@ -40,7 +48,7 @@ class SmartsStore:
         self._base_defs = []
 
     def add(self, definition: dict) -> None:
-        def_type = definition["type"]
+        def_type = definition[DefinitionAttribute.TYPE]
         if def_type == GroupTypeAttribute.ACID:
             self._acid_defs.append(definition)
         elif def_type == GroupTypeAttribute.BASE:

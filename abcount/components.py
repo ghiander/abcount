@@ -1,4 +1,5 @@
 import json
+import logging
 
 from rdkit import Chem
 
@@ -6,39 +7,26 @@ from abcount.config import fps
 from abcount.model import GroupTypeAttribute
 
 
-# class SmartsMatcher:
-#     def __init__(self, definitions_fp):
-#         self.definitions_fp = definitions_fp
-#         self.definitions = self._load_smarts_obj()
-
-#     def _load_smarts_obj(self):
-#         defs_dict = self._load_json()
-#         return [Chem.MolFromSmarts(d["smarts"]) for d in defs_dict]
-
-#     def _load_json(self):
-#         with open(self.definitions_fp) as f:
-#             return json.load(f)
-
-#     def count_matches(self, mol):
-#         count = 0
-#         for s in self.definitions:
-#             count += len(mol.GetSubstructMatches(s))
-#         return count
+logger = logging.getLogger(__name__)
 
 
 class SmartsMatcher:
     """Plain SMARTS matcher with count functionality."""
 
     def __init__(self, definitions_list: list):
-        self.definitions = self._load_smarts_obj(definitions_list)
+        self._load_smarts(definitions_list)
 
-    def _load_smarts_obj(self, definitions_list):
-        return [Chem.MolFromSmarts(d) for d in definitions_list]
+    def _load_smarts(self, definitions_list):
+        # Loaded as a tuple to retain original SMARTS for debugging
+        self.definitions_tup = [(Chem.MolFromSmarts(d), d) for d in definitions_list]
 
     def count_matches(self, mol):
         count = 0
-        for s in self.definitions:
-            count += len(mol.GetSubstructMatches(s))
+        for t in self.definitions_tup:
+            matches = len(mol.GetSubstructMatches(t[0]))
+            if matches:
+                logger.debug(f"SMARTS: {t[1]} - Matches: {matches}")
+            count += matches
         return count
 
 
@@ -47,11 +35,14 @@ class SmartsMatcherJson(SmartsMatcher):
 
     def __init__(self, definitions_fp):
         self.definitions_fp = definitions_fp
-        self.definitions = self._load_smarts_obj()
+        self._load_smarts()
 
-    def _load_smarts_obj(self):
-        defs_dict = self._load_json()
-        return [Chem.MolFromSmarts(d["smarts"]) for d in defs_dict]
+    def _load_smarts(self):
+        definitions_dict = self._load_json()
+        # Loaded as a tuple to retain original SMARTS for debugging
+        self.definitions_tup = [
+            (Chem.MolFromSmarts(d["smarts"]), d) for d in definitions_dict
+        ]
 
     def _load_json(self):
         with open(self.definitions_fp) as f:
