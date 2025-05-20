@@ -1,5 +1,6 @@
 - [ ] Create logo
-- [ ] Enable feeding external JSON files
+- [X] Enable feeding external JSON files
+- [X] UV publish for Pypi test and main
 - [ ] Explain how to add and update definitions
-- [ ] UV publish for Pypi test and main
 - [ ] Explain how to debug
+- [ ] Create report function that tells for each false positive and negative how many expected groups, how many predicted, and which SMARTS were matched

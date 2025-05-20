@@ -1,6 +1,7 @@
 import json
 import logging
 
+import rdkit
 from rdkit import Chem
 
 from abcount.config import fps
@@ -50,19 +51,30 @@ class SmartsMatcherJson(SmartsMatcher):
 
 
 class ABCounter:
-    def __init__(self):
+    def __init__(
+        self,
+        acid_defs_filepath=fps.acid_defs_filepath,
+        base_defs_filepath=fps.base_defs_filepath,
+    ):
         """
         Counts acidic and basic functional groups in a molecule using SMARTS pattern matching.
+
+        Args:
+            acid_defs_filepath (str): Path to custom acidic SMARTS definitions (optional).
+            base_defs_filepath (str): Path to custom basic SMARTS definitions (optional).
 
         Attributes:
             acid_matcher (SmartsMatcherJson): Matcher for acidic functional group patterns.
             base_matcher (SmartsMatcherJson): Matcher for basic functional group patterns.
         """
+        self.acid_defs_filepath = acid_defs_filepath
+        self.base_defs_filepath = base_defs_filepath
+        logger.debug(f"Loading Acidic SMARTS from path: {self.acid_defs_filepath}")
+        logger.debug(f"Loading Basic SMARTS from path: {self.base_defs_filepath}")
+        self.acid_matcher = SmartsMatcherJson(self.acid_defs_filepath)
+        self.base_matcher = SmartsMatcherJson(self.base_defs_filepath)
 
-        self.acid_matcher = SmartsMatcherJson(fps.acid_defs_filepath)
-        self.base_matcher = SmartsMatcherJson(fps.base_defs_filepath)
-
-    def count_acid_and_bases(self, mol):
+    def count_acid_and_bases(self, mol: rdkit.Chem.Mol):
         """
         Count acidic and basic groups in the given molecule.
 

@@ -1001,6 +1001,24 @@
         "doi": "10.1021/acs.jcim.1c00075"
     },
     {
+        "SMARTS": "[O-:0]-[!N:1]",
+        "type": "B",
+        "source": "Wu et al., MF-SuP-pKa pKa prediction, Acta Pharm. Sin. B, 2023",
+        "doi": "10.26434/chemrxiv-2022-t6q61"
+    },
+    {
+        "SMARTS": "[O-:0]-[N;+0:1]",
+        "type": "B",
+        "source": "Wu et al., MF-SuP-pKa pKa prediction, Acta Pharm. Sin. B, 2023",
+        "doi": "10.26434/chemrxiv-2022-t6q61"
+    },
+    {
+        "SMARTS": "[S-,N-,C-,n-,c-:0]",
+        "type": "B",
+        "source": "Wu et al., MF-SuP-pKa pKa prediction, Acta Pharm. Sin. B, 2023",
+        "doi": "10.26434/chemrxiv-2022-t6q61"
+    },
+    {
         "SMARTS": "[SX4](=O)(=O)[OX2H]",
         "type": "A",
         "source": "Manually curated",

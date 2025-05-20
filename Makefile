@@ -16,7 +16,7 @@ install:
 	pip install dist/abcount-*.tar.gz --force-reinstall
 
 upload_test:
-	twine upload -r testpypi dist/*
+	uv publish --index testpypi
 
 upload:
 	twine upload -r pypi dist/*

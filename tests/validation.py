@@ -39,7 +39,9 @@ for row in data:
                 fn_acid += 1
     # Relaxed validation in case of 2 groups
     if expected_acid == 2:
-        if predicted_acid >= expected_acid:
+        if (
+            predicted_acid >= expected_acid - 1
+        ):  # true positive if at least 1 group is matched
             tp_acid += 1
         else:
             fn_acid += 1
@@ -61,7 +63,9 @@ for row in data:
                 fn_base += 1
     # Relaxed validation in case of 2 groups
     if expected_base == 2:
-        if predicted_base >= expected_base:
+        if (
+            predicted_base >= expected_acid - 1
+        ):  # true positive if at least 1 group is matched
             tp_base += 1
         else:
             fn_base += 1

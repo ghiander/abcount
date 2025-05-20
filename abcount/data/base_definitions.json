@@ -354,5 +354,17 @@
     {
         "smarts": "[c;r5:0]:[c;r5:1]:[c;r5:2]:[c;r5:3]:[nH1;r5:4]",
         "type": "base"
+    },
+    {
+        "smarts": "[O-:0]-[!N:1]",
+        "type": "base"
+    },
+    {
+        "smarts": "[O-:0]-[N;+0:1]",
+        "type": "base"
+    },
+    {
+        "smarts": "[S-,N-,C-,n-,c-:0]",
+        "type": "base"
     }
 ]
