@@ -49,7 +49,7 @@ The SMARTS patterns used in this project were obtained from the following source
 ## Some useful commands
 - Generate acidic and basic definitions from aggregated data: `python abcount/_definitions.py`. A follow up on how definitions can be curated will be provided.
 - Run tests: `pytest -vss tests/test.py`
-- Run validation: `python tests/validation.py`
+- Run validation: `cd tests && validation.py`. This will also generate four CSV files listing out false positives and negatives for the test data.
 
 ## For developers
 - The package was created using `uv` (https://docs.astral.sh/uv/).

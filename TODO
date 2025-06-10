@@ -4,3 +4,4 @@
 - [ ] Explain how to add and update definitions
 - [ ] Explain how to debug
 - [X] Create report function that tells for each false positive (and which SMARTS were matched) and negative how many expected groups
+- [ ] Tutorial on how using the reporter for creating more definitions
