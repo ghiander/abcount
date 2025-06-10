@@ -8,9 +8,10 @@ build:
 
 test:
 	pytest -vss tests/test.py
+	pytest -vss tests/test_validation.py
 
 validate:
-	python tests/validation.py
+	cd tests && python validation.py
 
 install:
 	pip install dist/abcount-*.tar.gz --force-reinstall

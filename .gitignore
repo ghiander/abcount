@@ -52,3 +52,4 @@ docs/_build/
 
 # Custom
 .init
+*_report_*.csv

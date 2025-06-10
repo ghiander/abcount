@@ -1,3 +1,6 @@
+from dataclasses import dataclass
+
+
 class PredictionOutcome:
     pass
 
@@ -10,12 +13,16 @@ class TrueNegative(PredictionOutcome):
     pass
 
 
+@dataclass
 class FalsePositive(PredictionOutcome):
-    pass
+    matches: int
+    expected_matches: int
 
 
+@dataclass
 class FalseNegative(PredictionOutcome):
-    pass
+    matches: int
+    expected_matches: int
 
 
 class ABValidator:
@@ -30,7 +37,9 @@ class ABValidator:
             ):  # true positive if at least 1 group is matched
                 return TruePositive()
             else:
-                return FalseNegative()
+                return FalseNegative(
+                    matches=predicted_groups, expected_matches=expected_groups
+                )
 
         # Strict validation for 0 or 1 groups
         elif expected_groups in (0, 1):
@@ -43,9 +52,13 @@ class ABValidator:
             ):  # true positive
                 return TruePositive()
             if predicted_groups > expected_groups:  # false positive
-                return FalsePositive()
+                return FalsePositive(
+                    matches=predicted_groups, expected_matches=expected_groups
+                )
             if predicted_groups < expected_groups:  # only applies to n == 1
-                return FalseNegative()
+                return FalseNegative(
+                    matches=predicted_groups, expected_matches=expected_groups
+                )
 
 
 class MatchCounter:
@@ -55,14 +68,14 @@ class MatchCounter:
         self.fps = 0
         self.fns = 0
 
-    def count(self, match: PredictionOutcome):
-        if isinstance(match, TruePositive):
+    def count(self, outcome: PredictionOutcome):
+        if isinstance(outcome, TruePositive):
             self.tps += 1
-        elif isinstance(match, TrueNegative):
+        elif isinstance(outcome, TrueNegative):
             self.tns += 1
-        elif isinstance(match, FalsePositive):
+        elif isinstance(outcome, FalsePositive):
             self.fps += 1
-        elif isinstance(match, FalseNegative):
+        elif isinstance(outcome, FalseNegative):
             self.fns += 1
 
     def make_report(self):

@@ -24,11 +24,23 @@ class SmartsMatcher:
     def count_matches(self, mol):
         count = 0
         for t in self.definitions_tup:
-            matches = len(mol.GetSubstructMatches(t[0]))
+            matches = SmartsMatcher._match_smarts_to_mol(mol, t[0])
             if matches:
                 logger.debug(f"SMARTS: {t[1]} - Matches: {matches}")
             count += matches
         return count
+
+    def generate_matches_list(self, mol):
+        matches_list = []
+        for t in self.definitions_tup:
+            matches = SmartsMatcher._match_smarts_to_mol(mol, t[0])
+            if matches:
+                matches_list.append((t[1], matches))
+        return matches_list
+
+    @staticmethod
+    def _match_smarts_to_mol(mol, smarts):
+        return len(mol.GetSubstructMatches(smarts))
 
 
 class SmartsMatcherJson(SmartsMatcher):
