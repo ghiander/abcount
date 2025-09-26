@@ -1,7 +1,9 @@
 ![ABCount logo](https://github.com/ghiander/abcount/blob/main/docs/static/logo.png?raw=true)
 
 ## Introduction
-**ABCount** is a SMARTS-based tool that determines the number of acidic and basic groups in molecules.
+**ABCount** is an extended cheminformatics package to work with acidic and basic groups in molecules. The tool includes the following functionalities:
+- `ABCounter`: SMARTS-based tool to determine the number of acidic and basic groups in molecules.
+- `ABClassBuilder`: Builder class that accepts a dictionary of pKa numerical values and yields an `ABClassData` object with their corresponding classes such as `STRONG`, `WEAK`, and `NONE`.
 
 ## How to install the tool
 ABCount can be installed from pypi (https://pypi.org/project/abcount).
@@ -10,6 +12,7 @@ pip install abcount
 ```
 
 ## Usage
+### `ABCounter`
 ```python
 from rdkit import Chem
 from abcount import ABCounter
@@ -38,7 +41,49 @@ abc.acid_matcher.definitions_fp
 PosixPath('/my/path/acid_defs.json')
 ```
 
-## SMARTS definitions Source
+### `ABClassBuilder` and `ABClassData`
+```python
+from abcount import ABClassBuilder
+
+abcb = ABClassBuilder()
+# The builder expects two acidic and two basic groups with these key names.
+predictions = {"pka_acid1": 3.5, "pka_acid2": None, "pka_base1": 9.785, "pka_base2": None}
+abcb.build(predictions)
+```
+```python
+ABClassData(acid_1_class=<AcidType.STRONG: 'strong_acid'>, acid_2_class=<AcidType.NONE: 'no_acid'>, base_1_class=<BaseType.STRONG: 'strong_base'>, base_2_class=<BaseType.NONE: 'no_base'>)
+```
+
+```python
+from abcount import ABClassBuilder, PKaClassBuilder
+
+abcb = ABClassBuilder()
+# Custom names can be passed but these need to be configured in a `CustomPKaAttribute` class
+predictions = {"my_pka_acid1": 3.5, "my_pka_acid2": None, "my_pka_base1": 9.785, "my_pka_base2": None}
+CustomPKaAttribute = PKaClassBuilder.build(ACID_1="my_pka_acid1", BASE_1="my_pka_base1", ACID_2="my_pka_acid2", BASE_2="my_pka_base2")
+
+# The `CustomPKaAttribute` can then be passed to the builder which will map the new data to the rules
+abcb.build(predictions, CustomPKaAttribute)
+```
+```python
+ABClassData(acid_1_class=<AcidType.STRONG: 'strong_acid'>, acid_2_class=<AcidType.NONE: 'no_acid'>, base_1_class=<BaseType.STRONG: 'strong_base'>, base_2_class=<BaseType.NONE: 'no_base'>)
+```
+
+```python
+from abcount import ABClassBuilder, PKaClassBuilder
+
+abcb = ABClassBuilder()
+# It is possible to work with fewer acidic or basic groups
+# These can be set as arguments in the builder
+predictions = {"pka_acid1": 3.5, "pka_base1": 9.785}
+abcb.build(predictions, num_acids=1, num_bases=1)
+```
+```python
+# Note that despite passing only one group per type, the builder still returns two groups each
+ABClassData(acid_1_class=<AcidType.STRONG: 'strong_acid'>, acid_2_class=None, base_1_class=<BaseType.STRONG: 'strong_base'>, base_2_class=None)
+```
+
+## SMARTS definitions source for `ABCounter`
 The SMARTS patterns used in this project were obtained from the following sources. Note that definitions are not deduplicated, hence require curation to avoid redundant matching.
 
 * Pan, X.; Wang, H.; Li, C.; Zhang, J. Z. H.; Ji, C., **MolGpka: A Web Server for Small Molecule pKa Prediction Using a Graph-Convolutional Neural Network**
@@ -63,7 +108,7 @@ The `pyproject.toml` already contains the optional dependencies needed for devel
 ```bash
 # Make sure you have got Python >= 3.10
 python --version
-> Python 3.10.16
+> Python 3.12.7
 
 # Installs `abcount` in editable mode and with dev dependencies
 pip install -e .[dev]

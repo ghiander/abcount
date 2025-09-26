@@ -7,8 +7,14 @@ build:
 	uv build
 
 test:
-	pytest -vss tests/test.py
+	pytest -vss tests/test_counter.py
+	pytest -vss tests/test_classifier.py
 	pytest -vss tests/test_validation.py
+
+create_git_tag:
+	version=$$(grep -Po "version\s*=\s*['\"]\K[^'\"]+" pyproject.toml); \
+	git tag v$$version
+	git push --tags
 
 validate:
 	cd tests && python validation.py
