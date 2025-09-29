@@ -4,8 +4,8 @@ from pathlib import Path
 from rdkit import Chem
 
 from abcount.config import fps
-from abcount.model import DefinitionAttribute
-from abcount.model import GroupTypeAttribute
+from abcount.model.counter import DefinitionAttribute
+from abcount.model.counter import GroupTypeAttribute
 
 
 class RawDefinitionAttribute:

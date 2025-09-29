@@ -721,13 +721,6 @@
         "doi": "10.1021/acs.jcim.1c00075"
     },
     {
-        "SMARTS": "[C:0]-[C:1]-[NH2:2]",
-        "center_id": "2",
-        "type": "B",
-        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
-        "doi": "10.1021/acs.jcim.1c00075"
-    },
-    {
         "SMARTS": "[S:0]-[NH1:1]-[C:2]",
         "center_id": "1",
         "type": "B",

@@ -196,10 +196,6 @@
         "type": "base"
     },
     {
-        "smarts": "[C:0]-[C:1]-[NH2:2]",
-        "type": "base"
-    },
-    {
         "smarts": "[S:0]-[NH1:1]-[C:2]",
         "type": "base"
     },

@@ -23,10 +23,12 @@ install:
 	pip install dist/abcount-*.tar.gz --force-reinstall
 
 upload_test:
-	uv publish --index testpypi
+	version=$$(grep -Po "version\s*=\s*['\"]\K[^'\"]+" pyproject.toml); \
+	uvx uv-publish --repository testpypi dist/abcount-$$version*
 
 upload:
-	twine upload -r pypi dist/*
+	version=$$(grep -Po "version\s*=\s*['\"]\K[^'\"]+" pyproject.toml); \
+	twine upload -r pypi dist/abcount-$$version*
 
 coverage:
 	pytest --cov=src test/ -vv --cov-report term-missing
