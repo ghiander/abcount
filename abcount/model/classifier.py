@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from enum import Enum
 from typing import Callable
+from typing import Optional
 
 from dataclasses_json import dataclass_json
 
@@ -29,10 +30,10 @@ class BaseType(Enum):
 class ABClassData:
     """Class for tracking the types of Acid/Base groups in a molecule."""
 
-    acid_1_class: Enum | None = None
-    acid_2_class: Enum | None = None
-    base_1_class: Enum | None = None
-    base_2_class: Enum | None = None
+    acid_1_class: Optional[Enum] = None
+    acid_2_class: Optional[Enum] = None
+    base_1_class: Optional[Enum] = None
+    base_2_class: Optional[Enum] = None
 
     # references to own field names
     ACID_1_FIELD = "acid_1_class"
@@ -53,4 +54,4 @@ class Rule:
 
     operator: Callable
     type: Enum
-    value: float | None
+    value: Optional[float]
