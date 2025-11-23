@@ -1,9 +1,10 @@
 ![ABCount logo](https://github.com/ghiander/abcount/blob/main/docs/static/logo.png?raw=true)
 
 ## Introduction
-**ABCount** is an extended cheminformatics package to work with acidic and basic groups in molecules. The tool includes the following functionalities:
-- `ABCounter`: SMARTS-based tool to determine the number of acidic and basic groups in molecules.
-- `ABClassBuilder`: Builder class that accepts a dictionary of pKa numerical values and yields an `ABClassData` object with their corresponding classes such as `STRONG`, `WEAK`, and `NONE`.
+**ABCount** is an extended cheminformatics package to work with acidic and basic groups in molecules. The package includes the following functionalities:
+- `ABCounter`: SMARTS-based matcher to determine the number of acidic and basic groups in molecules.
+- `ABClassBuilder`: Converter that accepts a dictionary of pKa numerical values and yields an `ABClassData` object with their corresponding classes such as `STRONG`, `WEAK`, and `NONE`.
+- `IonMatcher`: Matcher that accepts an `ABClassData` object and yields an `IonDefinition` containing information about the major specie at pH 7.4 and its corresponding ionic class and explanation.
 
 ## How to install the tool
 ABCount can be installed from pypi (https://pypi.org/project/abcount).
@@ -53,16 +54,26 @@ abcb.build(predictions)
 ```python
 ABClassData(acid_1_class=<AcidType.STRONG: 'strong_acid'>, acid_2_class=<AcidType.NONE: 'no_acid'>, base_1_class=<BaseType.STRONG: 'strong_base'>, base_2_class=<BaseType.NONE: 'no_base'>)
 ```
+```python
+# to_dict() can be used to obtain a dictionary containing a mix of objects.
+# Alternatively, the output can also be serialised using to_json()
+abcb.build(predictions).to_json()
+```
+```python
+'{"acid_1_class": "strong_acid", "acid_2_class": "no_acid", "base_1_class": "strong_base", "base_2_class": "no_base"}'
+```
 
 ```python
 from abcount import ABClassBuilder, PKaClassBuilder
 
 abcb = ABClassBuilder()
-# Custom names can be passed but these need to be configured in a `CustomPKaAttribute` class
+# Custom names can be passed but these need to be
+# configured in a `CustomPKaAttribute` class.
 predictions = {"my_pka_acid1": 3.5, "my_pka_acid2": None, "my_pka_base1": 9.785, "my_pka_base2": None}
 CustomPKaAttribute = PKaClassBuilder.build(ACID_1="my_pka_acid1", BASE_1="my_pka_base1", ACID_2="my_pka_acid2", BASE_2="my_pka_base2")
 
-# The `CustomPKaAttribute` can then be passed to the builder which will map the new data to the rules
+# The `CustomPKaAttribute` can then be passed to the builder
+# which will map the new data to the rules.
 abcb.build(predictions, CustomPKaAttribute)
 ```
 ```python
@@ -70,7 +81,7 @@ ABClassData(acid_1_class=<AcidType.STRONG: 'strong_acid'>, acid_2_class=<AcidTyp
 ```
 
 ```python
-from abcount import ABClassBuilder, PKaClassBuilder
+from abcount import ABClassBuilder
 
 abcb = ABClassBuilder()
 # It is possible to work with fewer acidic or basic groups
@@ -79,8 +90,34 @@ predictions = {"pka_acid1": 3.5, "pka_base1": 9.785}
 abcb.build(predictions, num_acids=1, num_bases=1)
 ```
 ```python
-# Note that despite passing only one group per type, the builder still returns two groups each
+# Note that despite passing only one group per
+# type, the builder still returns two groups each.
 ABClassData(acid_1_class=<AcidType.STRONG: 'strong_acid'>, acid_2_class=None, base_1_class=<BaseType.STRONG: 'strong_base'>, base_2_class=None)
+```
+
+### `IonMatcher`
+```python
+from abcount import ABClassBuilder, IonMatcher
+
+abcb = ABClassBuilder()
+predictions = {"pka_acid1": 3.5, "pka_base1": 9.785}
+abcd = abcb.build(predictions, num_acids=1, num_bases=1)
+
+ion_matcher = IonMatcher()
+ion_matcher.match_class_data(abcd)
+```
+```python
+IonDefinition(class_data=ABClassData(acid_1_class=<AcidType.STRONG: 'strong_acid'>, acid_2_class=None, base_1_class=<BaseType.STRONG: 'strong_base'>, base_2_class=None), major_species_ph74_class='zwitterion', ion_class='zwitterion', explanation='zwitterion')
+```
+```python
+# to_json() can also be applied to `IonDefinition`
+# to yield a fully serialised representation.
+# Alternatively, to_dict() can be used to obtain 
+# a dictionary containing a mix of objects.
+ion_matcher.match_class_data(abcd).to_dict()
+```
+```
+{'class_data': {'acid_1_class': <AcidType.STRONG: 'strong_acid'>, 'acid_2_class': None, 'base_1_class': <BaseType.STRONG: 'strong_base'>, 'base_2_class': None}, 'major_species_ph74_class': 'zwitterion', 'ion_class': 'zwitterion', 'explanation': 'zwitterion'}
 ```
 
 ## SMARTS definitions source for `ABCounter`
