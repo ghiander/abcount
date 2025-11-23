@@ -161,15 +161,17 @@ def test_abclass_custom_builder_and_groups(input_dict, expected):
     "input_dict,expected",
     [
         (
-            {"my_pkaa1": 3.5, "my_pkab_1": 9.785},
+            {"my_pkaa_1": 3.5, "my_pkaa_2": 7.5, "my_pkab_1": 9.785},
             ABClassData(acid_1_class=AcidType.STRONG, base_1_class=BaseType.STRONG),
         )
     ],
 )
 def test_abclass_json(input_dict, expected):
-    CustomPKaAttribute = PKaClassBuilder.build(ACID_1="my_pkaa1", BASE_1="my_pkab_1")
-    classes_obj = ABClassBuilder().build(
-        input_dict, pka_attribute_cls=CustomPKaAttribute, num_acids=1, num_bases=1
+    CustomPKaAttribute = PKaClassBuilder.build(
+        ACID_1="my_pkaa_1", ACID_2="my_pkaa_2", BASE_1="my_pkab_1"
     )
-    expected = '{"acid_1_class": "strong_acid", "acid_2_class": null, "base_1_class": "strong_base", "base_2_class": null}'  # noqa
+    classes_obj = ABClassBuilder().build(
+        input_dict, pka_attribute_cls=CustomPKaAttribute, num_acids=2, num_bases=1
+    )
+    expected = '{"acid_1_class": "strong_acid", "acid_2_class": "no_acid", "base_1_class": "strong_base", "base_2_class": null}'  # noqa
     assert classes_obj.to_json() == expected

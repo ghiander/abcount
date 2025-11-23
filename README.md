@@ -86,13 +86,13 @@ from abcount import ABClassBuilder
 abcb = ABClassBuilder()
 # It is possible to work with fewer acidic or basic groups
 # These can be set as arguments in the builder
-predictions = {"pka_acid1": 3.5, "pka_base1": 9.785}
-abcb.build(predictions, num_acids=1, num_bases=1)
+predictions = {"pka_acid1": 3.5, "pka_acid2": 7.5, "pka_base1": 9.785}
+abcb.build(predictions, num_acids=2, num_bases=1)
 ```
 ```python
-# Note that despite passing only one group per
-# type, the builder still returns two groups each.
-ABClassData(acid_1_class=<AcidType.STRONG: 'strong_acid'>, acid_2_class=None, base_1_class=<BaseType.STRONG: 'strong_base'>, base_2_class=None)
+# Note that despite passing only one basic group, the builder still 
+# returns `base_2_class` but associating that with a None instead of BaseType.NONE.
+ABClassData(acid_1_class=<AcidType.STRONG: 'strong_acid'>, acid_2_class=<AcidType.NONE: 'no_acid'>, base_1_class=<BaseType.STRONG: 'strong_base'>, base_2_class=None)
 ```
 
 ### `IonMatcher`
@@ -100,13 +100,14 @@ ABClassData(acid_1_class=<AcidType.STRONG: 'strong_acid'>, acid_2_class=None, ba
 from abcount import ABClassBuilder, IonMatcher
 
 abcb = ABClassBuilder()
-predictions = {"pka_acid1": 3.5, "pka_base1": 9.785}
-abcd = abcb.build(predictions, num_acids=1, num_bases=1)
+predictions = {"pka_acid1": 3.5, "pka_acid2": 7.5, "pka_base1": 9.785}
+abcd = abcb.build(predictions, num_acids=2, num_bases=1)
 
 ion_matcher = IonMatcher()
 ion_matcher.match_class_data(abcd)
 ```
 ```python
+# Note that IonMatcher ignores AcidType.NONE and BaseType.NONE - treats them as None.
 IonDefinition(class_data=ABClassData(acid_1_class=<AcidType.STRONG: 'strong_acid'>, acid_2_class=None, base_1_class=<BaseType.STRONG: 'strong_base'>, base_2_class=None), major_species_ph74_class='zwitterion', ion_class='zwitterion', explanation='zwitterion')
 ```
 ```python

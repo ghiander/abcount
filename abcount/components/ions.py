@@ -10,6 +10,8 @@ class IonMatcher:
     """Matches AB data to the ion and species definitions."""
 
     def match_class_data(self, class_data: ABClassData) -> IonDefinition:
+        # ignore difference AcidType.NONE | BaseType.NONE and None
+        class_data.convert_nones_to_nulls()
         for ion_definition in IonRules:
             ion_obj = ion_definition.value
             if class_data == ion_obj.class_data:
