@@ -16,7 +16,13 @@ class IonMatcher:
             ion_obj = ion_definition.value
             if class_data == ion_obj.class_data:
                 return ion_obj
-        raise ValueError(f"Could not match any ion definition - (got {class_data})")
+        # raise ValueError(f"Could not match any ion definition - (got {class_data})")
+        return IonDefinition(
+            class_data=class_data,
+            major_species_ph74_class="undefined",
+            ion_class="undefined",
+            explanation="",
+        )
 
 
 class IonRules(Enum):

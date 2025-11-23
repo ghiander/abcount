@@ -1,5 +1,3 @@
-import pytest
-
 from abcount import IonMatcher
 from abcount.components.classifier import ABClassData
 from abcount.model.classifier import AcidType
@@ -47,12 +45,14 @@ def test_ions_matcher_ignore_nones():
     assert ion_def.explanation == "zwitterion"
 
 
-def test_ions_matcher_3():
+def test_ions_matcher_undefined():
     abcd = ABClassData(
         acid_1_class=AcidType.STRONG,
         acid_2_class=None,
         base_1_class=BaseType.STRONG,
         base_2_class=BaseType.STRONG,
     )
-    with pytest.raises(ValueError):
-        _ = ion_matcher.match_class_data(abcd)  # todo
+    ion_def = ion_matcher.match_class_data(abcd)
+    assert ion_def.major_species_ph74_class == "undefined"
+    assert ion_def.ion_class == "undefined"
+    assert ion_def.explanation == ""
