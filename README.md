@@ -4,7 +4,7 @@
 **ABCount** is an extended cheminformatics package to work with acidic and basic groups in molecules. The package includes the following functionalities:
 - `ABCounter`: SMARTS-based matcher to determine the number of acidic and basic groups in molecules.
 - `ABClassBuilder`: Converter that accepts a dictionary of pKa numerical values and yields an `ABClassData` object with their corresponding classes such as `STRONG`, `WEAK`, and `NONE`.
-- `IonMatcher`: Matcher that accepts an `ABClassData` object and yields an `IonDefinition` containing information about the major specie at pH 7.4 and its corresponding ionic class and explanation.
+- `IonMatcher`: Matcher that accepts an `ABClassData` object and yields an `IonDefinition` containing information about the major species at pH 7.4 and its corresponding ionic class and explanation.
 
 ## How to install the tool
 ABCount can be installed from pypi (https://pypi.org/project/abcount).
@@ -108,7 +108,7 @@ ion_matcher.match_class_data(abcd)
 ```
 ```python
 # Note that IonMatcher ignores AcidType.NONE and BaseType.NONE - treats them as None.
-IonDefinition(class_data=ABClassData(acid_1_class=<AcidType.STRONG: 'strong_acid'>, acid_2_class=None, base_1_class=<BaseType.STRONG: 'strong_base'>, base_2_class=None), major_species_ph74_class='zwitterion', ion_class='zwitterion', explanation='zwitterion')
+IonDefinition(class_data=ABClassData(acid_1_class=<AcidType.STRONG: 'strong_acid'>, acid_2_class=None, base_1_class=<BaseType.STRONG: 'strong_base'>, base_2_class=None), major_species_ph74_class='zwitterion', ion_class='zwitterion', explanation='acid_1_class: strong_acid, base_1_class: strong_base')
 ```
 ```python
 # to_json() can also be applied to `IonDefinition`
@@ -118,7 +118,7 @@ IonDefinition(class_data=ABClassData(acid_1_class=<AcidType.STRONG: 'strong_acid
 ion_matcher.match_class_data(abcd).to_dict()
 ```
 ```
-{'class_data': {'acid_1_class': <AcidType.STRONG: 'strong_acid'>, 'acid_2_class': None, 'base_1_class': <BaseType.STRONG: 'strong_base'>, 'base_2_class': None}, 'major_species_ph74_class': 'zwitterion', 'ion_class': 'zwitterion', 'explanation': 'zwitterion'}
+{'class_data': {'acid_1_class': <AcidType.STRONG: 'strong_acid'>, 'acid_2_class': None, 'base_1_class': <BaseType.STRONG: 'strong_base'>, 'base_2_class': None}, 'major_species_ph74_class': 'zwitterion', 'ion_class': 'zwitterion', 'explanation': 'acid_1_class: strong_acid, base_1_class: strong_base'}
 ```
 
 ## SMARTS definitions source for `ABCounter`

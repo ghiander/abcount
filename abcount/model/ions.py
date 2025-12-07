@@ -13,4 +13,4 @@ class IonDefinition:
     class_data: ABClassData
     major_species_ph74_class: str
     ion_class: str
-    explanation: str
+    explanation: str = None  # gets calculated rather than defined

@@ -17,7 +17,7 @@ def test_ions_matcher_1():
     ion_def = ion_matcher.match_class_data(abcd)
     assert ion_def.major_species_ph74_class == "zwitterion"
     assert ion_def.ion_class == "zwitterion"
-    assert ion_def.explanation == "zwitterion"
+    assert ion_def.explanation == "acid_1_class: strong_acid, base_1_class: strong_base"
 
 
 def test_ions_matcher_json_1():
@@ -28,7 +28,7 @@ def test_ions_matcher_json_1():
         base_2_class=None,
     )
     ion_def = ion_matcher.match_class_data(abcd).to_json()
-    expected = '{"class_data": {"acid_1_class": "strong_acid", "acid_2_class": null, "base_1_class": "strong_base", "base_2_class": null}, "major_species_ph74_class": "zwitterion", "ion_class": "zwitterion", "explanation": "zwitterion"}'  # noqa
+    expected = '{"class_data": {"acid_1_class": "strong_acid", "acid_2_class": null, "base_1_class": "strong_base", "base_2_class": null}, "major_species_ph74_class": "zwitterion", "ion_class": "zwitterion", "explanation": "acid_1_class: strong_acid, base_1_class: strong_base"}'  # noqa
     assert ion_def == expected
 
 
@@ -42,7 +42,7 @@ def test_ions_matcher_ignore_nones():
     ion_def = ion_matcher.match_class_data(abcd)
     assert ion_def.major_species_ph74_class == "zwitterion"
     assert ion_def.ion_class == "zwitterion"
-    assert ion_def.explanation == "zwitterion"
+    assert ion_def.explanation == "acid_1_class: strong_acid, base_1_class: strong_base"
 
 
 def test_ions_matcher_undefined():
@@ -53,6 +53,9 @@ def test_ions_matcher_undefined():
         base_2_class=BaseType.STRONG,
     )
     ion_def = ion_matcher.match_class_data(abcd)
-    assert ion_def.major_species_ph74_class == "undefined"
-    assert ion_def.ion_class == "undefined"
-    assert ion_def.explanation == ""
+    assert ion_def.major_species_ph74_class == "zwitterion"
+    assert ion_def.ion_class == "zwitterion"
+    assert (
+        ion_def.explanation
+        == "acid_1_class: strong_acid, base_1_class: strong_base, base_2_class: strong_base"
+    )

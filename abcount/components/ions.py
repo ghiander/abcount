@@ -15,14 +15,23 @@ class IonMatcher:
         for ion_definition in IonRules:
             ion_obj = ion_definition.value
             if class_data == ion_obj.class_data:
+                ion_obj.explanation = self._explanation_from_class_data(class_data)
                 return ion_obj
-        # raise ValueError(f"Could not match any ion definition - (got {class_data})")
+
+        # If no definition is matched, it's likely a unbalanced zwitterion
         return IonDefinition(
             class_data=class_data,
-            major_species_ph74_class="undefined",
-            ion_class="undefined",
-            explanation="",
+            major_species_ph74_class="zwitterion",
+            ion_class="zwitterion",
+            explanation=self._explanation_from_class_data(class_data),
         )
+
+    def _explanation_from_class_data(self, class_data):
+        return ", ".join(self._get_list_of_defined_groups(class_data))
+
+    def _get_list_of_defined_groups(self, class_data):
+        class_data_dict = class_data.to_dict()
+        return [f"{k}: {v.value}" for k, v in class_data_dict.items() if v]
 
 
 class IonRules(Enum):
@@ -35,7 +44,6 @@ class IonRules(Enum):
         ),
         major_species_ph74_class="zwitterion",
         ion_class="zwitterion",
-        explanation="zwitterion",
     )
 
     I2 = IonDefinition(
@@ -47,7 +55,6 @@ class IonRules(Enum):
         ),
         major_species_ph74_class="zwitterion",
         ion_class="zwitterion",
-        explanation="zwitterion - weak base",
     )
 
     I3 = IonDefinition(
@@ -59,7 +66,6 @@ class IonRules(Enum):
         ),
         major_species_ph74_class="dianion",
         ion_class="diacid",
-        explanation="diacid",
     )
 
     I4 = IonDefinition(
@@ -71,7 +77,6 @@ class IonRules(Enum):
         ),
         major_species_ph74_class="dianion",
         ion_class="diacid",
-        explanation="diacid - strong + weak",
     )
 
     I5 = IonDefinition(
@@ -83,7 +88,6 @@ class IonRules(Enum):
         ),
         major_species_ph74_class="anion",
         ion_class="acid",
-        explanation="acid",
     )
 
     I6 = IonDefinition(
@@ -95,7 +99,6 @@ class IonRules(Enum):
         ),
         major_species_ph74_class="anion",
         ion_class="weak acid",
-        explanation="weak acid",
     )
 
     I7 = IonDefinition(
@@ -107,7 +110,6 @@ class IonRules(Enum):
         ),
         major_species_ph74_class="dianion",
         ion_class="weak diacid",
-        explanation="weak diacid",
     )
 
     I8 = IonDefinition(
@@ -119,7 +121,6 @@ class IonRules(Enum):
         ),
         major_species_ph74_class="cation",
         ion_class="base",
-        explanation="base",
     )
 
     I9 = IonDefinition(
@@ -131,7 +132,6 @@ class IonRules(Enum):
         ),
         major_species_ph74_class="dication",
         ion_class="dibase",
-        explanation="dibase",
     )
 
     I10 = IonDefinition(
@@ -143,7 +143,6 @@ class IonRules(Enum):
         ),
         major_species_ph74_class="cation",
         ion_class="weak base",
-        explanation="weak base",
     )
 
     I11 = IonDefinition(
@@ -155,7 +154,6 @@ class IonRules(Enum):
         ),
         major_species_ph74_class="dication",
         ion_class="weak dibase",
-        explanation="weak dibase",
     )
 
     I12 = IonDefinition(
@@ -167,7 +165,6 @@ class IonRules(Enum):
         ),
         major_species_ph74_class="dication",
         ion_class="dibase",
-        explanation="dibase - strong + weak",
     )
 
     I13 = IonDefinition(
@@ -179,7 +176,6 @@ class IonRules(Enum):
         ),
         major_species_ph74_class="zwitterion",
         ion_class="weak zwitterion",
-        explanation="weak zwitterion",
     )
 
     I14 = IonDefinition(
@@ -191,7 +187,6 @@ class IonRules(Enum):
         ),
         major_species_ph74_class="zwitterion",
         ion_class="zwitterion",
-        explanation="zwitterion - weak acid",
     )
 
     I15 = IonDefinition(
@@ -200,5 +195,4 @@ class IonRules(Enum):
         ),
         major_species_ph74_class="neutral",
         ion_class="neutral",
-        explanation="neutral",
     )
