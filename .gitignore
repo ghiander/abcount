@@ -55,3 +55,4 @@ docs/_build/
 .init
 *_report_*.csv
 tests/cache/**
+validation_report.ipynb
