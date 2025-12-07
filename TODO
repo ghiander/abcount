@@ -1,7 +1,7 @@
-- [X] Create logo
 - [X] Enable feeding external JSON files
 - [X] UV publish for Pypi test and main
-- [ ] Explain how to add and update definitions
-- [ ] Explain how to debug
 - [X] Create report function that tells for each false positive (and which SMARTS were matched) and negative how many expected groups
+- [X] Create integration with SMARTS viewer for granular report inspection
+- [ ] Explain how to add and update definitions
 - [ ] Tutorial on how using the reporter for creating more definitions
+- [ ] pI calculation using Henderson-Hasselbalch

@@ -51,5 +51,7 @@ coverage.xml
 docs/_build/
 
 # Custom
+.env
 .init
 *_report_*.csv
+tests/cache/**

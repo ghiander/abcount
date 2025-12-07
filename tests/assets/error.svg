@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Error: The input could not be processed</title>
+  <desc id="desc">Square error image with an error icon and message text.</desc>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" rx="24" ry="24" fill="#fff5f5" stroke="#ffd6d6" stroke-width="6"></rect>
+
+  <!-- Error icon (circle with X) -->
+  <g transform="translate(256,140)">
+    <circle r="72" fill="#ff4d4f"></circle>
+    <g transform="rotate(45)">
+      <rect x="-6" y="-42" width="12" height="84" rx="6" fill="#fff"></rect>
+      <rect x="-42" y="-6" width="84" height="12" rx="6" fill="#fff"></rect>
+    </g>
+  </g>
+
+  <!-- Text -->
+  <text x="50%" y="300" text-anchor="middle" font-family="Inter, Roboto, Arial, sans-serif" font-size="36" font-weight="700" fill="#a80000">Error:</text>
+
+  <text x="50%" y="352" text-anchor="middle" font-family="Inter, Roboto, Arial, sans-serif" font-size="20" font-weight="500" fill="#4a0000">The input could not be processed</text>
+
+  <text x="50%" y="380" text-anchor="middle" font-family="Inter, Roboto, Arial, sans-serif" font-size="20" font-weight="500" fill="#4a0000">This image was generated locally</text>
+
+</svg>

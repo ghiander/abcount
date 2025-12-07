@@ -6,6 +6,7 @@ from _match import FalseNegative
 from _match import FalsePositive
 from _match import PredictionOutcome
 from rdkit import Chem
+from smarts import smarts_server
 
 from abcount.components import SmartsMatcher
 
@@ -93,6 +94,23 @@ class ReportGenerator:
         self.fn_df.to_csv(
             f"{prefix}fn_report_{ReportGenerator._get_timestamp()}.csv", index=False
         )
+
+    def get_reports(self):
+        return self.fp_df, self.fn_df
+
+    def render_molecules_in_reports(self):
+        for df in [self.fp_df, self.fn_df]:
+            df["target_img"] = df["target"].apply(Chem.MolFromSmiles)
+
+            # SMARTS definitions are only present in the case of false positives
+            if "smarts" in df.columns:
+                df["smarts_img"] = df["smarts"].apply(
+                    lambda s: (
+                        smarts_server.generate_smarts_base64_svg(
+                            s, height=300, width=300
+                        )
+                    )
+                )
 
     @staticmethod
     def _get_timestamp():
