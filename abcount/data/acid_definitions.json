@@ -216,10 +216,6 @@
         "type": "acid"
     },
     {
-        "smarts": "[SX4](=O)(=O)[OX2H]",
-        "type": "acid"
-    },
-    {
         "smarts": "[#16X2H]",
         "type": "acid"
     },
@@ -237,6 +233,26 @@
     },
     {
         "smarts": "[n;r5][nH;r5][c;r5]",
+        "type": "acid"
+    },
+    {
+        "smarts": "[c;r5][nH][c;r5]",
+        "type": "acid"
+    },
+    {
+        "smarts": "[NH1,NH2]-[CX3](=S)[NH1]",
+        "type": "acid"
+    },
+    {
+        "smarts": "[NH2]-[CX3](=O)[c;r6]",
+        "type": "acid"
+    },
+    {
+        "smarts": "[NH1]-[CX3](=O)[NH1]",
+        "type": "acid"
+    },
+    {
+        "smarts": "[C;r]-[CX3;r](=O)-[NH1;r]",
         "type": "acid"
     }
 ]

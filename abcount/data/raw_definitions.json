@@ -1012,12 +1012,6 @@
         "doi": "10.26434/chemrxiv-2022-t6q61"
     },
     {
-        "SMARTS": "[SX4](=O)(=O)[OX2H]",
-        "type": "A",
-        "source": "Manually curated",
-        "doi": null
-    },
-    {
         "SMARTS": "[#16X2H]",
         "type": "A",
         "source": "Manually curated",
@@ -1043,6 +1037,36 @@
     },
     {
         "SMARTS": "[n;r5][nH;r5][c;r5]",
+        "type": "A",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
+        "SMARTS": "[c;r5][nH][c;r5]",
+        "type": "A",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
+        "SMARTS": "[NH1,NH2]-[CX3](=S)[NH1]",
+        "type": "A",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
+        "SMARTS": "[NH2]-[CX3](=O)[c;r6]",
+        "type": "A",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
+        "SMARTS": "[NH1]-[CX3](=O)[NH1]",
+        "type": "A",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
+        "SMARTS": "[C;r]-[CX3;r](=O)-[NH1;r]",
         "type": "A",
         "source": "Manually curated",
         "doi": null

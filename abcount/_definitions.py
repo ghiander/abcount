@@ -74,7 +74,7 @@ class SmartsDump:
             json.dump(defs, f, indent=4)
 
 
-if __name__ == "__main__":
+def process_raw_definitions():
     with open(fps.raw_data_filepath) as f:
         definitions = json.load(f)
 
@@ -86,3 +86,7 @@ if __name__ == "__main__":
 
     SmartsDump.save_definitions_to_json(store.acid_defs, fps.acid_defs_filepath)
     SmartsDump.save_definitions_to_json(store.base_defs, fps.base_defs_filepath)
+
+
+if __name__ == "__main__":
+    process_raw_definitions()
