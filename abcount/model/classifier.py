@@ -6,13 +6,6 @@ from typing import Optional
 from dataclasses_json import dataclass_json
 
 
-class PKaAttribute:
-    ACID_1 = "pka_acid1"
-    BASE_1 = "pka_base1"
-    ACID_2 = "pka_acid2"
-    BASE_2 = "pka_base2"
-
-
 class AcidType(Enum):
     STRONG = "strong_acid"
     WEAK = "weak_acid"
