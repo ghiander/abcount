@@ -3,8 +3,8 @@ import numpy as np
 from abcount.model.classifier import ABClassData
 from abcount.model.classifier import AcidType
 from abcount.model.classifier import BaseType
-from abcount.model.classifier import PKaAttribute
 from abcount.model.classifier import Rule
+from abcount.model.common import PKaAttribute
 
 
 def isnone(value, _):
@@ -93,17 +93,6 @@ class ABClassBuilder:
                     break
 
 
-class PKaClassBuilder:
-    @classmethod
-    def build(cls, **overrides):
-        """
-        Return a CustomPKaAttribute class with overridden values.
-        Any attributes not given in overrides will
-        fall back to the parent values.
-        """
-        return type("CustomPKaAttribute", (PKaAttribute,), overrides)
-
-
 if __name__ == "__main__":
     example = {
         "pka_acid1": 3.5,
@@ -113,5 +102,4 @@ if __name__ == "__main__":
     }
     print(example)
     mjc = ABClassBuilder()
-    mjc.predict_from_dict(example)
-    mjc.get_classes_obj()
+    print(mjc.build(example))

@@ -10,6 +10,7 @@ test:
 	pytest -vss tests/test_counter.py
 	pytest -vss tests/test_classifier.py
 	pytest -vss tests/test_ions.py
+	pytest -vss tests/test_isoelectric.py
 	pytest -vss tests/test_validation.py
 
 create_git_tag:

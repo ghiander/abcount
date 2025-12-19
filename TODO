@@ -4,4 +4,6 @@
 - [X] Create integration with SMARTS viewer for granular report inspection
 - [ ] Explain how to add and update definitions
 - [ ] Tutorial on how using the reporter for creating more definitions
-- [ ] pI calculation using Henderson-Hasselbalch
+- [X] pI calculation using Henderson-Hasselbalch
+- [ ] Include pI examples in README
+- [ ] pI calculation via upper and lower bound (non bisect)

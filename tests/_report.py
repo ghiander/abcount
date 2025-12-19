@@ -6,7 +6,9 @@ from _match import FalseNegative
 from _match import FalsePositive
 from _match import PredictionOutcome
 from rdkit import Chem
-from smarts import smarts_server
+from smarts import (
+    smarts_server,
+)  # TODO: this creates tight coupling - replace with ABC and inject
 
 from abcount.components import SmartsMatcher
 
