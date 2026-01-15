@@ -51,6 +51,23 @@ def test_pI_predict_di_and_mono():
     assert math.isclose(pI, 10.25, abs_tol=1e-1)
 
 
+def test_pI_predict_di_di_custom():
+    CustomPKaAttribute = PKaClassBuilder.build(
+        ACID_1="my_pka_acid1",
+        BASE_1="my_pka_base1",
+        ACID_2="my_pka_acid2",
+        BASE_2="my_pka_base2",
+    )
+    example = {
+        "my_pka_acid1": 3,
+        "my_pka_base1": 5.5,
+        "my_pka_acid2": 12,
+        "my_pka_base2": 8.5,
+    }
+    pI = pIPredictor.predict_input(example, CustomPKaAttribute)
+    assert math.isclose(pI, 7, abs_tol=1e-1)
+
+
 def test_pI_predict_di_di():
     example = {
         "pka_acid1": 3,
