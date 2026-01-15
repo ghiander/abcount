@@ -18,16 +18,48 @@ def test_pI_predict_mono():
     assert math.isclose(pI, 7.5, abs_tol=1e-1)
 
 
-# TODO: Implement
-# def test_pI_predict_diacid():
-#     example = {
-#         "pka_acid1": 3,
-#         "pka_acid2": 5.5,
-#         "pka_base1": None,
-#         "pka_base2": None,
-#     }
-#     pI = pIPredictor.predict_input(example)
-#     assert math.isclose(pI, 4.25, abs_tol=1e-1)
+def test_pI_predict_diacid():
+    example = {
+        "pka_acid1": 3,
+        "pka_acid2": 5.5,
+        "pka_base1": None,
+        "pka_base2": None,
+    }
+    pI = pIPredictor.predict_input(example)
+    assert math.isclose(pI, 3, abs_tol=1e-1)
+
+
+def test_pI_predict_dibasic():
+    example = {
+        "pka_acid1": None,
+        "pka_acid2": None,
+        "pka_base1": 12,
+        "pka_base2": 8.5,
+    }
+    pI = pIPredictor.predict_input(example)
+    assert math.isclose(pI, 12, abs_tol=1e-1)
+
+
+def test_pI_predict_di_and_mono():
+    example = {
+        "pka_acid1": 3,
+        "pka_acid2": None,
+        "pka_base1": 12,
+        "pka_base2": 8.5,
+    }
+    pI = pIPredictor.predict_input(example)
+    assert math.isclose(pI, 10.25, abs_tol=1e-1)
+
+
+def test_pI_predict_di_di():
+    example = {
+        "pka_acid1": 3,
+        "pka_acid2": 5.5,
+        "pka_base1": 12,
+        "pka_base2": 8.5,
+    }
+    pI = pIPredictor.predict_input(example)
+    assert math.isclose(pI, 7, abs_tol=1e-1)
 
 
 def test_netcharge_calc():
