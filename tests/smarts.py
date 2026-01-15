@@ -126,9 +126,5 @@ class SmartsRenderServer:
             w.write(image_str)
 
 
-# create singleton
-smarts_server = SmartsRenderServer()
-
-
 if __name__ == "__main__":
     svg_smarts = SmartsRenderServer().generate_smarts("[SX4](=O)(=O)[OX2H]")

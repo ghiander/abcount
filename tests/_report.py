@@ -6,9 +6,7 @@ from _match import FalseNegative
 from _match import FalsePositive
 from _match import PredictionOutcome
 from rdkit import Chem
-from smarts import (
-    smarts_server,
-)  # TODO: this creates tight coupling - replace with ABC and inject
+from smarts import SmartsRenderServer
 
 from abcount.components import SmartsMatcher
 
@@ -100,7 +98,8 @@ class ReportGenerator:
     def get_reports(self):
         return self.fp_df, self.fn_df
 
-    def render_molecules_in_reports(self):
+    def render_molecules_in_reports(self, smarts_server_cls=SmartsRenderServer):
+        smarts_server = smarts_server_cls()  # using the class to avoid init on import
         for df in [self.fp_df, self.fn_df]:
             df["target_img"] = df["target"].apply(Chem.MolFromSmiles)
 
