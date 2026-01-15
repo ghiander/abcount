@@ -5,6 +5,7 @@
 - `ABCounter`: SMARTS-based matcher to determine the number of acidic and basic groups in molecules.
 - `ABClassBuilder`: Converter that accepts a dictionary of pKa numerical values and yields an `ABClassData` object with their corresponding classes such as `STRONG`, `WEAK`, and `NONE`.
 - `IonMatcher`: Matcher that accepts an `ABClassData` object and yields an `IonDefinition` containing information about the major species at pH 7.4 and its corresponding ionic class and explanation.
+- `pIPredictor`: Predictor based on the Henderson–Hasselbalch equation for calculating the pI of molecules. It accepts a dictionary of pKa values and calculates the pI using either the bisect method or value bounds.
 
 ## How to install the tool
 ABCount can be installed from pypi (https://pypi.org/project/abcount).
@@ -119,6 +120,38 @@ ion_matcher.match_class_data(abcd).to_dict()
 ```
 ```
 {'class_data': {'acid_1_class': <AcidType.STRONG: 'strong_acid'>, 'acid_2_class': None, 'base_1_class': <BaseType.STRONG: 'strong_base'>, 'base_2_class': None}, 'major_species_ph74_class': 'zwitterion', 'ion_class': 'zwitterion', 'explanation': 'acid_1_class: strong_acid, base_1_class: strong_base'}
+```
+
+### `pIPredictor`
+```python
+from abcount.components.isoelectric import pIPredictor
+predictions = {
+        "pka_acid1": 3,
+        "pka_acid2": None,
+        "pka_base1": 12,
+        "pka_base2": 8.5,
+    }
+pIPredictor.predict_input(predictions)
+```
+```
+10.25
+```
+
+```python
+from abcount import PKaClassBuilder
+from abcount.components.isoelectric import pIPredictor
+
+CustomPKaAttribute = PKaClassBuilder.build(ACID_1="my_pka_acid1", BASE_1="my_pka_base1", ACID_2="my_pka_acid2", BASE_2="my_pka_base2")
+predictions = {
+    "my_pka_acid1": 3,
+    "my_pka_base1": 5.5,
+    "my_pka_acid2": 12,
+    "my_pka_base2": 8.5,
+}
+pIPredictor.predict_input(predictions, CustomPKaAttribute)
+```
+```
+7.0
 ```
 
 ## SMARTS definitions source for `ABCounter`
