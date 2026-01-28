@@ -79,6 +79,17 @@ def test_pI_predict_di_di():
     assert math.isclose(pI, 7, abs_tol=1e-1)
 
 
+def test_pI_predict_weak_leaking():
+    example = {
+        "pka_acid1": 10,
+        "pka_acid2": None,
+        "pka_base1": 2.4,
+        "pka_base2": 2.3,
+    }
+    pI = pIPredictor.predict_input(example)
+    assert math.isclose(pI, 6.33, abs_tol=1e-1)
+
+
 def test_netcharge_calc():
     example = {
         "pka_acid1": 3,
