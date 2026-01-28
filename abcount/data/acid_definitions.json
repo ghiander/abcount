@@ -232,27 +232,31 @@
         "type": "acid"
     },
     {
-        "smarts": "[n;r5][nH;r5][c;r5]",
+        "smarts": "[nH1;r]",
         "type": "acid"
     },
     {
-        "smarts": "[c;r5][nH][c;r5]",
+        "smarts": "[c]-[NH]-[c]",
         "type": "acid"
     },
     {
-        "smarts": "[NH1,NH2]-[CX3](=S)[NH1]",
+        "smarts": "[C,c,NH,N]-[C,c](=O)-[NH1,nH1,NH2]",
         "type": "acid"
     },
     {
-        "smarts": "[NH2]-[CX3](=O)[c;r6]",
+        "smarts": "[C,c,NH,N]-[C,c](=N)-[NH1,nH1,NH2]",
         "type": "acid"
     },
     {
-        "smarts": "[NH1]-[CX3](=O)[NH1]",
+        "smarts": "[S](=O)(=O)-[NH2,NH]",
         "type": "acid"
     },
     {
-        "smarts": "[C;r]-[CX3;r](=O)-[NH1;r]",
+        "smarts": "[C](=S)-[NH2]",
+        "type": "acid"
+    },
+    {
+        "smarts": "[C,c](=S)-[NH]",
         "type": "acid"
     }
 ]

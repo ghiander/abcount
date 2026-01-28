@@ -1036,37 +1036,43 @@
         "doi": null
     },
     {
-        "SMARTS": "[n;r5][nH;r5][c;r5]",
+        "SMARTS": "[nH1;r]",
         "type": "A",
         "source": "Manually curated",
         "doi": null
     },
     {
-        "SMARTS": "[c;r5][nH][c;r5]",
+        "SMARTS": "[c]-[NH]-[c]",
         "type": "A",
         "source": "Manually curated",
         "doi": null
     },
     {
-        "SMARTS": "[NH1,NH2]-[CX3](=S)[NH1]",
+        "SMARTS": "[C,c,NH,N]-[C,c](=O)-[NH1,nH1,NH2]",
         "type": "A",
         "source": "Manually curated",
         "doi": null
     },
     {
-        "SMARTS": "[NH2]-[CX3](=O)[c;r6]",
+        "SMARTS": "[C,c,NH,N]-[C,c](=N)-[NH1,nH1,NH2]",
         "type": "A",
         "source": "Manually curated",
         "doi": null
     },
     {
-        "SMARTS": "[NH1]-[CX3](=O)[NH1]",
+        "SMARTS": "[S](=O)(=O)-[NH2,NH]",
         "type": "A",
         "source": "Manually curated",
         "doi": null
     },
     {
-        "SMARTS": "[C;r]-[CX3;r](=O)-[NH1;r]",
+        "SMARTS": "[C](=S)-[NH2]",
+        "type": "A",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
+        "SMARTS": "[C,c](=S)-[NH]",
         "type": "A",
         "source": "Manually curated",
         "doi": null
