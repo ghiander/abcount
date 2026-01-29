@@ -1,6 +1,6 @@
 [project]
 name = "abcount"
-version = "0.2.7"
+version = "0.2.8"
 description = "Extended cheminformatics package to work with acidic and basic groups in molecules."
 readme = "README.md"
 requires-python = ">=3.10"

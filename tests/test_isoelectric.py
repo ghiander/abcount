@@ -101,6 +101,17 @@ def test_netcharge_calc():
     assert math.isclose(nq, 0.0, abs_tol=1e-2)
 
 
+def test_no_groups():
+    example = {
+        "pka_acid1": None,
+        "pka_acid2": None,
+        "pka_base1": None,
+        "pka_base2": None,
+    }
+    pI = pIPredictor.predict_input(example)
+    assert pI is None
+
+
 def test_netcharge_custom_calc():
     example = {"pka_1": 3, "pka_2": None, "pkb_1": 11, "pkb_2": None}
     CustomPKaAttribute = PKaClassBuilder.build(

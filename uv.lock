@@ -9,7 +9,7 @@ resolution-markers = [
 
 [[package]]
 name = "abcount"
-version = "0.2.7"
+version = "0.2.8"
 source = { virtual = "." }
 dependencies = [
     { name = "dataclasses-json" },

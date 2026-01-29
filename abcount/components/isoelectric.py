@@ -12,6 +12,8 @@ class pIPredictor:
     def predict_input(
         pka_dict: dict, pka_attribute_cls=PKaAttribute, rounding_digits=2
     ):
+        if not pIPredictor.any_pkas(pka_dict, pka_attribute_cls):
+            return None
         result = pIPredictor._predict_exact(
             pka_dict, pka_attribute_cls=pka_attribute_cls
         )
@@ -32,6 +34,16 @@ class pIPredictor:
             )
         else:
             return pIPredictor._predict_by_bound(pka_dict, pka_attribute_cls)
+
+    @staticmethod
+    def any_pkas(pka_dict, __pka_attribute_cls__):
+        pka_attributes = [
+            __pka_attribute_cls__.ACID_1,
+            __pka_attribute_cls__.ACID_2,
+            __pka_attribute_cls__.BASE_1,
+            __pka_attribute_cls__.BASE_2,
+        ]
+        return any([pka_dict[attr] for attr in pka_attributes])
 
     @staticmethod
     def _predict_by_bound(pka_dict: dict, pka_attribute_cls=PKaAttribute):

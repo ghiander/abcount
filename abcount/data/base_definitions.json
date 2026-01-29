@@ -40,18 +40,6 @@
         "type": "base"
     },
     {
-        "smarts": "[C:0]-[nX3;H0:1]([C,c:2])([C,c:3])",
-        "type": "base"
-    },
-    {
-        "smarts": "[c:0]:[nX2:1]:[c:2]",
-        "type": "base"
-    },
-    {
-        "smarts": "[c:0]:[nX2:1]:[nX3:2]:[c:3]=[OX1:4]",
-        "type": "base"
-    },
-    {
         "smarts": "[CX4:0]-[NX3:1](-[H:2])-[CX4:3]",
         "type": "base"
     },
@@ -61,18 +49,6 @@
     },
     {
         "smarts": "[c:0]:[nX2:1]:[n:2]:[n:3]:[n:4]-[CX4:5]",
-        "type": "base"
-    },
-    {
-        "smarts": "[CX4:0](-[CX4:1])(-[CX4:2])-[NH2:3]",
-        "type": "base"
-    },
-    {
-        "smarts": "[CX3:0]=[NX2:1]-[CX4,SX4:2]",
-        "type": "base"
-    },
-    {
-        "smarts": "[c:0]-[NH2:1]",
         "type": "base"
     },
     {
@@ -152,15 +128,7 @@
         "type": "base"
     },
     {
-        "smarts": "[C:0]=[NX2:1]-[C:2]",
-        "type": "base"
-    },
-    {
         "smarts": "[PX4:0](-[NH1:1])=[OX1:2]",
-        "type": "base"
-    },
-    {
-        "smarts": "[CX4:0]-[CX4:1]-[NH2:2]",
         "type": "base"
     },
     {
@@ -284,10 +252,6 @@
         "type": "base"
     },
     {
-        "smarts": "[c:0]:[c:1]:[c:2]:[c:3]:[nX3:4]-[cX3:5]",
-        "type": "base"
-    },
-    {
         "smarts": "[nX2H0:0]:[nX2H0:1]:[nX2H0:2]:[nX3H0:3]:[c:4]:[c:5]",
         "type": "base"
     },
@@ -340,15 +304,7 @@
         "type": "base"
     },
     {
-        "smarts": "[NX3:0](-[C:1])(-[C:2])-[C:3]=[S:4]",
-        "type": "base"
-    },
-    {
         "smarts": "[c:0]:[nX2H0:1]:[nX2H0:2]:[nX2H0:3]:[nX3H0:4]",
-        "type": "base"
-    },
-    {
-        "smarts": "[c;r5:0]:[c;r5:1]:[c;r5:2]:[c;r5:3]:[nH1;r5:4]",
         "type": "base"
     },
     {
@@ -361,6 +317,26 @@
     },
     {
         "smarts": "[S-,N-,C-,n-,c-:0]",
+        "type": "base"
+    },
+    {
+        "smarts": "[C,c]-[NH2]",
+        "type": "base"
+    },
+    {
+        "smarts": "[C,c]-[NH]-[C,c]",
+        "type": "base"
+    },
+    {
+        "smarts": "[C,c]-[N](-[C,c])-[C,c]",
+        "type": "base"
+    },
+    {
+        "smarts": "[c]:[n]:[c]",
+        "type": "base"
+    },
+    {
+        "smarts": "[n]=[n]-[*]",
         "type": "base"
     }
 ]
