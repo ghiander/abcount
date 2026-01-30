@@ -32,10 +32,6 @@
         "type": "base"
     },
     {
-        "smarts": "[CX4:0]-[NX3:1]([CX4,c:2])([CX4,c:3])",
-        "type": "base"
-    },
-    {
         "smarts": "[C:0](-[C,c:1])=[NX2:2]-[O:3]-[H:4]",
         "type": "base"
     },
@@ -121,10 +117,6 @@
     },
     {
         "smarts": "[c:0]:[nX2H0:1]:[nX2H0:2]:[cX3:3]:[nX3:4]-[NX3:5]",
-        "type": "base"
-    },
-    {
-        "smarts": "[c:0]:[nX2:1]:[nX3:2]:[cX3:3]:[cX3:4]",
         "type": "base"
     },
     {
@@ -328,15 +320,27 @@
         "type": "base"
     },
     {
-        "smarts": "[C,c]-[N](-[C,c])-[C,c]",
+        "smarts": "[C,c,S]-[N](-[C,c])-[C,c,S]",
         "type": "base"
     },
     {
-        "smarts": "[c]:[n]:[c]",
+        "smarts": "[c,n]:[n]:[c,n]",
         "type": "base"
     },
     {
         "smarts": "[n]=[n]-[*]",
+        "type": "base"
+    },
+    {
+        "smarts": "[C]-[N]=[C]",
+        "type": "base"
+    },
+    {
+        "smarts": "[C]=[NH]",
+        "type": "base"
+    },
+    {
+        "smarts": "[S]=[N]-[c]",
         "type": "base"
     }
 ]

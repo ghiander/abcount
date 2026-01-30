@@ -588,13 +588,6 @@
         "doi": "10.1021/acs.jcim.1c00075"
     },
     {
-        "SMARTS": "[c:0]:[nX2:1]:[nX3:2]:[cX3:3]:[cX3:4]",
-        "center_id": "1",
-        "type": "B",
-        "source": "Pan et al., MolGpka pKa prediction, J. Chem. Inf. Model., 2021",
-        "doi": "10.1021/acs.jcim.1c00075"
-    },
-    {
         "SMARTS": "[PX4:0](-[NH1:1])=[OX1:2]",
         "center_id": "1",
         "type": "B",
@@ -958,19 +951,19 @@
         "doi": null
     },
     {
-        "SMARTS": "[c]-[NH]-[c]",
+        "SMARTS": "[c,C]-[NH]-[c]",
         "type": "A",
         "source": "Manually curated",
         "doi": null
     },
     {
-        "SMARTS": "[C,c,NH,N]-[C,c](=O)-[NH1,nH1,NH2]",
+        "SMARTS": "[C,c,NH,N,O]-[C,c](=O)-[NH,nH,NH2]",
         "type": "A",
         "source": "Manually curated",
         "doi": null
     },
     {
-        "SMARTS": "[C,c,NH,N]-[C,c](=N)-[NH1,nH1,NH2]",
+        "SMARTS": "[C,c,NH,N,O]-[C,c](=N)-[NH,nH,NH2]",
         "type": "A",
         "source": "Manually curated",
         "doi": null
@@ -994,6 +987,18 @@
         "doi": null
     },
     {
+        "SMARTS": "[C,c]-[S](=O)-[NH]",
+        "type": "A",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
+        "SMARTS": "[C,c]-[S](=O)=[NH]",
+        "type": "A",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
         "SMARTS": "[C,c]-[NH2]",
         "type": "B",
         "source": "Manually curated",
@@ -1006,19 +1011,37 @@
         "doi": null
     },
     {
-        "SMARTS": "[C,c]-[N](-[C,c])-[C,c]",
+        "SMARTS": "[C,c,S]-[N](-[C,c])-[C,c,S]",
         "type": "B",
         "source": "Manually curated",
         "doi": null
     },
     {
-        "SMARTS": "[c]:[n]:[c]",
+        "SMARTS": "[c,n]:[n]:[c,n]",
         "type": "B",
         "source": "Manually curated",
         "doi": null
     },
     {
         "SMARTS": "[n]=[n]-[*]",
+        "type": "B",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
+        "SMARTS": "[C]-[N]=[C]",
+        "type": "B",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
+        "SMARTS": "[C]=[NH]",
+        "type": "B",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
+        "SMARTS": "[S]=[N]-[c]",
         "type": "B",
         "source": "Manually curated",
         "doi": null

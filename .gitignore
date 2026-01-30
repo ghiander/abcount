@@ -56,3 +56,4 @@ docs/_build/
 *_report_*.csv
 tests/cache/**
 tests/_validation_report.ipynb
+*isac*

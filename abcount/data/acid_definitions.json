@@ -236,15 +236,15 @@
         "type": "acid"
     },
     {
-        "smarts": "[c]-[NH]-[c]",
+        "smarts": "[c,C]-[NH]-[c]",
         "type": "acid"
     },
     {
-        "smarts": "[C,c,NH,N]-[C,c](=O)-[NH1,nH1,NH2]",
+        "smarts": "[C,c,NH,N,O]-[C,c](=O)-[NH,nH,NH2]",
         "type": "acid"
     },
     {
-        "smarts": "[C,c,NH,N]-[C,c](=N)-[NH1,nH1,NH2]",
+        "smarts": "[C,c,NH,N,O]-[C,c](=N)-[NH,nH,NH2]",
         "type": "acid"
     },
     {
@@ -257,6 +257,14 @@
     },
     {
         "smarts": "[C,c](=S)-[NH]",
+        "type": "acid"
+    },
+    {
+        "smarts": "[C,c]-[S](=O)-[NH]",
+        "type": "acid"
+    },
+    {
+        "smarts": "[C,c]-[S](=O)=[NH]",
         "type": "acid"
     }
 ]
