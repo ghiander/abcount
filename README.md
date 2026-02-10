@@ -2,7 +2,7 @@
 
 ## Introduction
 **ABCount** is an extended cheminformatics package to work with acidic and basic groups in molecules. The package includes the following functionalities:
-- `ABCounter`: SMARTS-based matcher to determine the number of acidic and basic groups in molecules.
+- `ABCounter`: SMARTS-based matcher to determine the number of acidic and basic groups in molecules. Note that the method is not sensitive to tautomers.
 - `ABClassBuilder`: Converter that accepts a dictionary of pKa numerical values and yields an `ABClassData` object with their corresponding classes such as `STRONG`, `WEAK`, and `NONE`.
 - `IonMatcher`: Matcher that accepts an `ABClassData` object and yields an `IonDefinition` containing information about the major species at pH 7.4 and its corresponding ionic class and explanation.
 - `pIPredictor`: Predictor based on the Henderson–Hasselbalch equation for calculating the pI of molecules. It accepts a dictionary of pKa values and calculates the pI using either the bisect method or value bounds. Note that the bisect method may yield results that are in disagreement with discrete charge methods: e.g., for a molecule with a weak acid [`pKa == 10`] and a weak base [`pKb == 2`], you would expect to find a zero charge as soon as pH moves from 2 towards basic values (`pI == pH == ~2.1`); however, this implementation calculates charges as fractional, hence for weak groups they leak shifting the pI towards the average [`pH ~= 6`].

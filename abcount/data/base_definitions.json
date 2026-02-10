@@ -320,7 +320,7 @@
         "type": "base"
     },
     {
-        "smarts": "[C,c,S]-[N](-[C,c])-[C,c,S]",
+        "smarts": "[O,N,C,c,S]-[N](-[C,c])-[C,c,S]",
         "type": "base"
     },
     {
@@ -341,6 +341,22 @@
     },
     {
         "smarts": "[S]=[N]-[c]",
+        "type": "base"
+    },
+    {
+        "smarts": "[N;r]-[NH;r]-[C;r]",
+        "type": "base"
+    },
+    {
+        "smarts": "[C;r]=[N;r]-[NH;r]",
+        "type": "base"
+    },
+    {
+        "smarts": "[NH]-[NH]",
+        "type": "base"
+    },
+    {
+        "smarts": "[OH]-[NH]-[C]",
         "type": "base"
     }
 ]

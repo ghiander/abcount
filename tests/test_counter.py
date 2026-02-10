@@ -23,7 +23,7 @@ def test_smarts_matcher_2():
 def test_abcounter_1():
     smiles = "[nH]1nnnc1-c3c2[nH]ncc2ccc3"
     acid_exp = 2
-    base_exp = 2
+    base_exp = 6  # generalised to include every lone pair
     mol = Chem.MolFromSmiles(smiles)
     abc = ABCounter()
     res = abc.count_acid_and_bases(mol)

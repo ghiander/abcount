@@ -1011,7 +1011,7 @@
         "doi": null
     },
     {
-        "SMARTS": "[C,c,S]-[N](-[C,c])-[C,c,S]",
+        "SMARTS": "[O,N,C,c,S]-[N](-[C,c])-[C,c,S]",
         "type": "B",
         "source": "Manually curated",
         "doi": null
@@ -1042,6 +1042,30 @@
     },
     {
         "SMARTS": "[S]=[N]-[c]",
+        "type": "B",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
+        "SMARTS": "[N;r]-[NH;r]-[C;r]",
+        "type": "B",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
+        "SMARTS": "[C;r]=[N;r]-[NH;r]",
+        "type": "B",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
+        "SMARTS": "[NH]-[NH]",
+        "type": "B",
+        "source": "Manually curated",
+        "doi": null
+    },
+    {
+        "SMARTS": "[OH]-[NH]-[C]",
         "type": "B",
         "source": "Manually curated",
         "doi": null
